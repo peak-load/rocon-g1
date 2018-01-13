@@ -1,0 +1,18 @@
+[Unit]
+Description=Rocon Updater (one-shot rocon updater on startup)
+Requires=can.service network.target ntp.service
+After=can.service network.service ntp.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/local/rocon-g1/updater
+ExecStart=/var/local/rocon-g1/updater/run.sh
+StandardOutput=syslog
+SyslogIdentifier=rocon.updater
+User=root
+Group=root
+RemainAfterExit=yes
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

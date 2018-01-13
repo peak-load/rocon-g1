@@ -1,0 +1,1 @@
+var NetworkInterfaces=require("./src/NetworkInterfaces"),networkInterfaces=new NetworkInterfaces;networkInterfaces.run();

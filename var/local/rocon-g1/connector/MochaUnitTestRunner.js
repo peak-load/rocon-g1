@@ -1,0 +1,1 @@
+var Mocha=require("mocha"),walk=require("walk"),mocha=new Mocha({reporter:"dot",ui:"bdd",timeout:2e3}),testDir="./spec-unit",walker=walk.walkSync(testDir,{});walker.on("file",function(a,b){b.name.match(".*(Spec|Test).js")&&mocha.addFile(a+"/"+b.name)}),walker.on("end",function(){mocha.run()});

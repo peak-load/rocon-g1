@@ -1,0 +1,1 @@
+var LanguageController=function(){};LanguageController.prototype.put=function(a,b){a.session.locale=a.body.lang,b.redirect(a.header("Referer")?a.header("Referer"):"/")},module.exports=LanguageController;

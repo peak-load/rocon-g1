@@ -1,0 +1,45 @@
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner navbar-top">
+        <div class="container">
+            {{#if currentUser}}
+                <ul class="nav pull-right">
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            {{ currentUser }}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="first"><a href="/web/user">{{Trans "web.security.password.change"}}</a></li>
+                            <li class="last"><a href="/web/logout">{{Trans "web.logout"}}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            {{/if}}
+            <form class="nav nav-language pull-right" action="language" method="post">
+                <input type="hidden" name="_method" value="PUT"/>
+                <div class="form-buttons">
+                    <input type="submit" class="english button" name="lang" value="en">
+                    <input type="submit" class="german button" name="lang" value="de">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="navbar-inner navbar-bottom">
+        <div class="container">
+            <a title="Startseite" href="/" class="brand"></a>
+            {{#if currentUser}}
+                <ul class="nav">
+                    <li class="first">
+                        <a href="/web/apikey">{{ Trans "web.navigation.apikey" }}</a>
+                    </li>
+                    <li class="first">
+                        <a href="/web/export">{{ Trans "web.navigation.export" }}</a>
+                    </li>
+                    <li class="last">
+                        <a href="/web/diagnosis">{{ Trans "web.navigation.diagnosis" }}</a>
+                    </li>
+                </ul>
+            {{/if}}
+        </div>
+    </div>
+</div>

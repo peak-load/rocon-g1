@@ -1,0 +1,53 @@
+<table class='dateTimeControl width-full mt-25'>
+    <tr>
+        <td colspan='8'>{{Trans 'web.dateTimeControl.title'}}</td>
+    </tr>
+    <tr>
+        <td style='width:200px;'>
+            <div class='checkbox'>
+                <label >
+                    <input type='checkbox' name='useClientTime' checked> 
+                    <span>{{Trans 'web.dateTimeControl.useClientTime'}}</span>
+                </label>
+            </div>
+        </td>
+        <td class='datetime'>
+            <select name='day' disabled />
+            {{#Iterate 1 31}}
+                <option {{Selected index ../currentDate.day}}>{{index}}</option>
+            {{/Iterate}}
+            </select>.
+        </td>
+        <td class='datetime'>
+            <select name='month' disabled />
+            {{#Iterate 1 12}}
+                <option {{Selected index ../currentDate.month}}>{{index}}</option>
+            {{/Iterate}}
+            </select>.
+        </td>
+        <td class='datetime'>
+            <select name='year' disabled />
+            {{#Iterate 1970 60}}
+                <option {{Selected index ../currentDate.year}}>{{index}}</option>
+            {{/Iterate}}
+            </select>
+        </td>
+        <td class='datetime'>-</td>
+        <td class='datetime'>
+            <select name='hour' disabled /> 
+            {{#Iterate 0 24}}
+                <option  {{Selected index ../currentDate.hour}}>{{index}}</option>
+            {{/Iterate}}
+            </select>
+        </td>
+        <td class='datetime'>:</td>
+        <td class='datetime'>
+            <select name='minute' disabled />
+            {{#Iterate 0 60}}
+                <option {{Selected index ../currentDate.minute}}>{{index}}</option>
+            {{/Iterate}}
+            </select>
+        </td>
+        <td style='width:250px;'></td>
+    </tr>
+</table>

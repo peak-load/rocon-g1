@@ -1,0 +1,1 @@
+module.exports=function(a){return function(b,c,d){c.locals.currentUser=b.session.user?b.session.user:null,c.locals.daikin="daikin"===a.getBrand()?"daikin":null,console.log(a.getBrand()),d()}};

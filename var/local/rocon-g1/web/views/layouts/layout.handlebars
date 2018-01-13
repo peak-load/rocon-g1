@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta content="IE=9; IE=8; IE=7; IE=EDGE" http-equiv="X-UA-Compatible" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link href="/web/public/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="/web/public/css/app.css" rel="stylesheet" media="screen" />
+    {{#if daikin}}
+        <link href="/web/public/css/app_daikin.css" rel="stylesheet" media="screen" />
+        <link href="/web/public/img/faviconDaikin.ico" rel="shortcut icon">
+    <title>DAIKIN Control</title>
+    {{else}}
+        <link href="/web/public/img/favicon.ico" rel="shortcut icon">
+    <title>ROTEX Control</title>
+    {{/if}}
+</head>
+<body>
+    {{> navigation}}
+    <div class="container">
+        {{#if error}}
+            <div class="alert alert-error">
+                {{#each error}}
+                    {{Trans this}}
+                {{/each}}
+            </div>
+        {{/if}}
+        {{#if success}}
+            <div class="alert alert-success">
+                {{#each success}}
+                    {{Trans this}}
+                {{/each}}
+            </div>
+        {{/if}}
+        <div class="row-fluid">
+            {{{body}}}
+        </div>
+        <footer class="footer">
+            <div class="pull-left">
+                {{#if daikin}}
+                    <span>DAIKIN</span>
+                {{else}}
+                    <span>ROTEX Heating Systems GmbH</span>
+                {{/if}}
+            </div>
+        </footer>
+    </div>
+
+    <script src="/web/public/lib/jquery/jquery-1.11.1.min.js"></script>
+    <script src="/web/public/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/web/public/lib/ui-controls.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+var RenderMiddleware=function(){};RenderMiddleware.prototype.middleware=function(a,b,c){var d=b.render;b.render=function(c,e,f){e?(e.error=a.flash("error"),e.success=a.flash("success")):e={error:a.flash("error"),success:a.flash("success")},d.call(b,c,e,f)},c()},module.exports=RenderMiddleware;

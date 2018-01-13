@@ -1,0 +1,1 @@
+var winston=require("winston"),config=require("./config"),logger=new winston.Logger({transports:[new winston.transports.File({level:"emerg",filename:config.logger.roconLogFile,maxsize:1048576,datePattern:".yyyy-MM-dd.log"})]});module.exports=logger;

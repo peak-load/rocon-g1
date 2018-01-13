@@ -1,0 +1,1 @@
+var fs=require("fs");module.exports=function(a){return function(b,c,d){var e="",f="";fs.existsSync(a.logger.loggingConfigPath)&&(e=fs.readFileSync(a.logger.loggingConfigPath,"UTF8"),f=JSON.parse(e)),c.locals.logging=f.logging===!0?"logging":null,d()}};

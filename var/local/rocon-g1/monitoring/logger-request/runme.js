@@ -1,0 +1,1 @@
+var LoggerConfigRequester=require("./src/LoggerConfigRequester"),loggerConfigRequester=new LoggerConfigRequester;loggerConfigRequester.run();

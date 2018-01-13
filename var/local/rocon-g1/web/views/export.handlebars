@@ -1,0 +1,41 @@
+<form method="post" action="/web/export.json" class="well">
+    <h5>{{Trans 'web.export.exportTitle'}}</h5>
+    
+    {{#unless exportReady}}
+    <div class="alert alert-block"> 
+        {{Trans 'web.export.exportNotReady'}}
+    </div>
+    {{/unless}}
+    
+    {{> dateTimeControl}}
+
+    <table class="width-full">
+        <tr>
+            <td colspan='8'>{{Trans 'web.export.additionalInformation.title'}}</td>
+        </tr>
+        <tr>
+            <td colspan='8'><input type='text' name='additionalInformation' /></td>
+        </tr>
+    </table>
+
+    <div class="mt-25">
+        <input type="submit" value="{{Trans 'web.export.exportSubmit'}}" class="btn btn-primary" />
+    </div>
+</form>
+
+<form name="importJson" method="post" action="/web/import" enctype="multipart/form-data" class="well">
+    <h5>{{Trans 'web.export.importTitle'}}</h5>
+    
+    <div class="alert alert-info">
+        {{Trans 'web.export.importInformation'}}
+    </div>
+
+    {{> dateTimeControl}}
+
+    <div class="mt-25">
+        <span class="btn btn-default btn-file">
+            Browse <input type="file" accept="application/json" name="importJson" />
+        </span>
+        <input type="submit" value="{{ Trans 'web.export.submitImport' }}" class="btn btn-primary" disabled="disabled" />
+    </div>
+</form>

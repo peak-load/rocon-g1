@@ -1,0 +1,1 @@
+var config=require("../config/config"),_=require("underscore"),fs=require("fs"),LoggerInformation=function(){_.bindAll(this)};LoggerInformation.prototype.isLoggingActivated=function(){var a=fs.readFileSync(config.logger.loggingConfigPath,"UTF8"),b=JSON.parse(a);return b.logging},module.exports=LoggerInformation;

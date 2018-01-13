@@ -1,0 +1,25 @@
+.navbar .navbar-inner .brand {
+    background: url("/web/public/img/logo_daikin.png") no-repeat scroll center center #FFFFFF;
+    padding: 0 10px;
+}
+.navbar .navbar-bottom {
+    background-color: #363636;
+}
+.btn-info, .btn-primary {
+    background-color: #363636;
+    color: #FFFFFF;
+}
+.btn-info:focus, .btn-primary:focus,
+.btn-info:hover, .btn-primary:hover {
+    background-color: #4D4D4D;
+    color: #FFFFFF;
+}
+.navbar .nav .dropdown-menu li > a:hover,
+.navbar .nav .dropdown-menu li > a:focus,
+.navbar .nav .dropdown-submenu:hover > a,
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: #00A0E4;
+    color: #FFFFFF;
+}

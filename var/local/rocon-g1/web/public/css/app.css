@@ -1,0 +1,343 @@
+.navbar,
+.container {
+    min-width: 940px;
+}
+
+.btn-info, .btn-primary {
+    background-color: #FBF309;
+    background-image: none;
+    background-repeat: repeat-x;
+    color: #000000;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-info:hover, .btn-primary:hover {
+    background-color: #EBE409;
+    color: #000000;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.container .login .content {
+    box-shadow: none;
+}
+
+.navbar .navbar-top .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: #777777;
+    border-top-color: #777777;
+}
+
+.navbar .navbar-top .nav-language  {
+    margin-right: 15px;
+}
+
+.navbar .navbar-top .nav-language  > li > a {
+    padding: 4px 5px 3px;
+}
+
+.navbar-intro {
+    position: inherit;
+    margin: -124px 0 20px 0;
+}
+
+.navbar-intro .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: #000000;
+    border-top-color: #000000;
+}
+
+.navbar-intro .navbar-bottom .nav > li > a {
+    color: #000000;
+}
+
+.navbar-intro .navbar-bottom ul.nav > li {
+    border-right: 2px solid #000000;
+}
+
+.navbar .roc-brand {
+    float: right;
+    margin: 10px;
+}
+
+.navbar .navbar-bottom ul.nav > li.first {
+    margin-left: 0;
+}
+
+.navbar-bottom ul.nav > li:last-child {
+    border-right: none;
+}
+
+.popover {
+    max-width: 600px;
+    width: auto;
+}
+
+.label-success {
+    background-color: #FBF309;
+    color: #000000;
+}
+
+#webclient-language-select {
+    width: 100%;
+}
+
+table thead {
+    background-color: #363636;
+    color: #FFFFFF;
+}
+
+.form-signin {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    margin: 0 auto 20px;
+    padding: 19px 29px 29px;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 20px;
+}
+
+.content .hero-unit {
+    background: #FAFAFA;
+    border: 1px solid #E5E5E5;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 40px;
+}
+
+.content .hero-unit h1 {
+    margin-bottom: 15px;
+}
+
+.popover {
+    z-index: 10001;
+}
+
+table [class^="icon-"] {
+    margin-top: 3px;
+}
+
+/* core */
+
+body {
+    padding-top: 124px;
+    overflow-y: scroll;
+}
+
+@media (max-width: 979px) {
+    body {
+        padding-top: 0px;
+        overflow-y: scroll;
+    }
+}
+
+.navbar .navbar-inner .brand {
+    background: url("/web/public/img/logo.png") no-repeat scroll center 7px #FBF309;
+    padding: 0 10px;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    height: 77px;
+    margin: 0;
+    padding: 0 10px;
+    width: 192px;
+}
+.navbar .brand {
+    color: #777777;
+    display: block;
+    float: left;
+    font-size: 20px;
+    font-weight: 200;
+    margin-left: -20px;
+    padding: 10px 20px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.navbar .navbar-bottom {
+    filter: none;
+    background-color: #909092;
+    background-image: none;
+    height: 77px;
+    border: none;
+}
+
+.navbar .navbar-top {
+    filter: none;
+    background-color: #ffffff;
+    background-image: none;
+    height: 17px;
+    min-height: 27px;
+    border: none;
+}
+
+.navbar .navbar-top .nav > li > a {
+    padding: 4px 10px 3px;
+}
+
+.navbar .navbar-bottom .nav > li > a {
+    color: #ffffff;
+    text-shadow: none;
+    padding: 3px 15px;
+}
+
+.navbar .navbar-bottom .navbar-search {
+    width: auto;
+    margin: 40px 15px 0 0;
+}
+
+.navbar .navbar-bottom > li > a:focus,
+.navbar .navbar-bottom > li > a:hover {
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar .navbar-bottom .nav {
+    margin: 51px 10px 0 10px;
+}
+
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: #ffffff;
+    border-top-color: #ffffff;
+}
+
+.navbar .nav .dropdown-menu {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #d5d5d6;
+    border: none;
+    padding: 0;
+}
+
+.navbar .nav > li > .dropdown-menu:after,
+.navbar .nav > li > .dropdown-menu:before {
+    border: none;
+    display: none;
+}
+
+.navbar .nav .dropdown-menu > li {
+    border-bottom: 1px solid #ffffff;
+}
+
+.navbar .nav .dropdown-menu > li.last {
+    border-bottom: none;
+}
+
+.navbar .nav .dropdown-menu li > a:hover,
+.navbar .nav .dropdown-menu li > a:focus,
+.navbar .nav .dropdown-submenu:hover > a,
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    filter: none;
+    background-color: #fbf309;
+    background-image: none;
+    color: #000000;
+}
+
+.navbar .navbar-bottom ul.nav > li {
+    border-right: 2px solid #ffffff;
+}
+
+.navbar .navbar-bottom ul.nav > li.first {
+    margin-left: 10px;
+}
+
+.dropdown-menu > li > a {
+    clear: both;
+    color: #333333;
+    display: block;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 3px 20px;
+    white-space: nowrap;
+}
+
+.nav-language .german {
+    background: url("/web/public/img/de_DE.png") no-repeat scroll center center;
+    border: none;
+    color: rgba(0, 0, 0, 0);
+}
+.nav-language .english {
+    background: url("/web/public/img/en_UK.png") no-repeat scroll center center;
+    border: none;
+    color: rgba(0, 0, 0, 0);
+}
+.navbar .navbar-bottom ul.nav > li {
+    border-right: 2px solid #ffffff;
+}
+
+.navbar .navbar-bottom ul.nav > li.first {
+    margin-left: 0;
+}
+.navbar .navbar-bottom ul.nav > li.last {
+    border-right: medium none;
+}
+
+.navbar .navbar-bottom ul.nav > li > a:hover {
+    color: #ffffff;
+}
+.form-buttons .button {
+    border: none;
+    color: rgba(0, 0, 0, 0);
+    padding: 5px 6px;
+}
+.nav-language #buttons {
+    padding: 3px 0;
+}
+
+.width-full {
+    width:100%;
+}
+
+.width-30 {
+    width: 30%;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+/*** dateTimeControl ***/
+
+.dateTimeControl select { 
+    width: 70px;
+}
+
+.dateTimeControl td.datetime {
+    text-align: center;
+}
+
+.dateTimeControl .checkbox label {
+    display: block;
+    float: left;
+    padding-right: 8px;
+    white-space: nowrap;
+}
+.dateTimeControl .checkbox input {
+    vertical-align: middle;
+}
+.dateTimeControl .checkbox label span {
+    vertical-align: middle;
+}
+
+/*** /dateTimeControl ***/

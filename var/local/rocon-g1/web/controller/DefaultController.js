@@ -1,0 +1,1 @@
+var _=require("underscore"),DefaultController=function(){_.bindAll(this)};DefaultController.prototype.redirectHome=function(a,b){b.redirect("/web")},DefaultController.prototype.index=function(a,b){b.render("home")},module.exports=DefaultController;

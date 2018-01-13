@@ -1,0 +1,7 @@
+#m h d m y
+25 * * * * /var/local/rocon-g1/updater/run.sh
+55 2 * * * /var/local/rocon-g1/scheduler/reboot/run.sh
+* * * * * /var/local/rocon-g1/monitoring/network-interfaces/run.sh
+11 1 * * * /bin/systemctl restart rocon.service
+40 * * * * /var/local/rocon-g1/monitoring/logger-request/run.sh
+35 3 * * * /var/local/rocon-g1/updater/clean.sh

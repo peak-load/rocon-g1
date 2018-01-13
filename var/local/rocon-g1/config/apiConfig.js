@@ -1,0 +1,1 @@
+var apiConfig={loggerconfigRequester:"/logging/config/"};module.exports=apiConfig;

@@ -1,0 +1,112 @@
+<h3>{{Trans 'web.parameterTester.title'}}</h3>
+
+{{#if errorMessage}}
+    <div class='alert alert-error'>  
+        {{Trans errorMessage}}
+    </div>
+{{/if}}
+
+<div class='alert alert-info'>
+    {{Trans 'web.parameterTester.requiredFields'}}
+</div>
+
+<form method='post' action='/web/OEM2015' class='well'>
+    <h4> {{Trans 'web.parameterTester.paramIdentification.title'}}</h4>
+
+    <table class='width-full'>
+        <tr>
+            <td class='width-30'>{{Trans 'web.parameterTester.paramIdentification.devices'}}</td>
+            <td>
+                <select name='device' required>
+                    {{#each devices}}
+                        <option {{Selected this ../device}}> {{this}} </option>
+                    {{/each}}
+                </select>
+            </td>
+            <td>*</td>
+        </tr>
+        <tr> 
+            <td>{{Trans 'web.parameterTester.paramIdentification.infoNumberHighByte'}}</td>
+            <td>
+                <div class="input-prepend">
+                    <span class="add-on">0x</span>
+                    <input type='text' name='infoNumberHighByte' required placeholder='01' value='{{infoNumberHighByte}}'/>
+                </div>
+            </td>
+            <td>*</td>   
+        </tr>
+        <tr> 
+            <td>{{Trans 'web.parameterTester.paramIdentification.infoNumberLowByte'}}</td>
+            <td>
+                <div class="input-prepend">
+                    <span class="add-on">0x</span>
+                    <input type='text' name='infoNumberLowByte' required placeholder='24' value='{{infoNumberLowByte}}'/>
+                </div>
+            </td>
+            <td>*</td>   
+        </tr>
+        <tr>
+            <td>{{ Trans 'web.parameterTester.valueDefinition.bigEndianActive'}}</td>
+            <td>
+                {{#if bigEndian}}
+                    <input type='checkbox' name='bigEndian' checked />
+                {{else}}
+                    <input type='checkbox' name='bigEndian' />
+                {{/if}}
+
+            </td>
+            <td></td>
+        </tr>        
+    </table>
+    
+    <h4 style='margin-top:25px;'> {{Trans 'web.parameterTester.valueDefinition.title'}}</h4>
+
+    <table class='width-full'>
+        <tr>
+            <td class='width-30'>{{Trans 'web.parameterTester.valueDefinition.type'}}</td>
+            <td>
+                <select name='type' required>
+                    {{#each types}}
+                        <option {{Selected this ../type}}> {{this}} </option>
+                    {{/each}}
+                </select>
+            </td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td colspan='3'><h5>{{Trans 'web.parameterTester.valueDefinition.floatDefinition' }}</h5></td>
+        </tr>
+        <tr>
+            <td>{{Trans 'web.parameterTester.valueDefinition.factor'}}</td>
+            <td>
+                <input type='text' name='factor' placeholder='10' value='{{factor}}'/>
+            </td>
+            <td></td>
+        </td>
+    </table>
+
+    <h4 style='margin-top:25px;'> {{Trans 'web.parameterTester.submit.title'}}</h4>
+
+    <table class='width-full'>
+        <tr>
+            <td class='width-30'>{{Trans 'web.parameterTester.submit.securityCode' }}</td>
+            <td>
+                <input type='text' name='securityCode' value='{{securityCode}}' required /> *
+            </td>
+            <td>
+                <input type='submit' value='{{Trans 'web.parameterTester.submit.button'}}' class='btn btn-primary'  />
+            </td>
+        </tr>
+    </table>
+</form>
+
+<form class='well'>
+    <h4> {{Trans 'web.parameterTester.output.title'}}</h4>
+    <table class='width-full'>
+        <tr>
+            <td >
+                <textarea rows='4' readonly class='width-full'>{{resultOutput}}</textarea>
+            </td>
+       </tr>
+    </table>
+</form>

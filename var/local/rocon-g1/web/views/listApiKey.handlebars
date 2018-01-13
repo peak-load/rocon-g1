@@ -1,0 +1,38 @@
+<form method="post" action="/web/apikey" class="well">
+    <h5>{{Trans 'web.apikey.create.title'}}</h5>
+    <input type="text" class="input-block-level span9" name="description" placeholder="{{Trans 'web.apikey.description'}}" />
+    <input type="submit" value="{{Trans 'web.apikey.create'}}" class="btn btn-primary span2 pull-right" />
+</form>
+<table class="table table-bordered table-striped table-condensed">
+    <thead>
+        <tr>
+            <th>{{Trans "web.apikey.title"}}</th>
+            <th>{{Trans "web.apikey.description"}}</th>
+            <th>{{Trans "web.apikey.user"}}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="webclient-installation-list-body">
+        {{#each apikeyList}}
+            <tr>
+                <td>
+                    {{key}}
+                </td>
+                <td>
+                    {{ description }}
+                </td>
+                <td>
+                    {{ user }}
+                </td>
+                <td>
+                    <form action="/web/apikey/{{key}}" method="post">
+                        <input type="hidden" name="_method" value="DELETE"/>
+                        <div class="form-buttons">
+                            <input type="submit" class="button icon-trash" value="X">
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

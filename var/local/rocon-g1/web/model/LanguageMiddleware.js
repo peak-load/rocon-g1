@@ -1,0 +1,1 @@
+var _=require("underscore"),assert=require("assert"),LanguageMiddleware=function(a){assert(a),this.i18n=a,_.bindAll(this)};LanguageMiddleware.prototype.language=function(a,b,c){var d=a.session.locale?a.session.locale:a.headers["accept-language"].substr(0,2).toLowerCase();this.i18n.setLocale(d),c()},module.exports=LanguageMiddleware;

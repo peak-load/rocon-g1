@@ -1,0 +1,1 @@
+var Reboot=require("./src/Reboot"),rebooter=new Reboot;rebooter.run();

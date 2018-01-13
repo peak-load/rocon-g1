@@ -1,0 +1,2 @@
+25 * * * * /var/local/rocon-g1/updater/run.sh > /var/log/rocon-updater.log 2>&1
+55 2 * * * /sbin/reboot

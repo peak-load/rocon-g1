@@ -1,0 +1,1 @@
+var crypto=require("crypto"),PasswordGenerator=function(){};PasswordGenerator.prototype.createHash=function(a,b){return crypto.createHash("sha512").update(a).update(b).digest("base64")},module.exports=PasswordGenerator;

@@ -1,0 +1,1 @@
+"use strict";var exec=require("child_process").exec,util=require("util");module.exports=function(a){exec("/bin/mkdir -p /home/root/.rocon",{},function(b){if(b)return a(b);var c="/home/root/.rocon/user.json";exec(util.format("/bin/cp -f %s/user.json "+c,__dirname),{},a)})};

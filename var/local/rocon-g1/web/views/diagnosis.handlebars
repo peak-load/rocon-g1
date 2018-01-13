@@ -1,0 +1,31 @@
+<form name="diagnosisHandler" method="post" action="/web/diagnosis/logging" enctype="multipart/form-data" class="well">
+    <h5>{{Trans 'web.diagnosis.diagnosisHandler'}}</h5>
+    {{#if logging}}
+      <div class="alert alert-info" name>
+        {{Trans 'web.diagnosis.on'}}
+      </div>
+      <input type="hidden" name="logging" value="off"/>
+      <input type="submit" value="{{ Trans 'web.diagnosis.SubmitOff' }}" class="btn btn-primary"/>
+    {{else}}
+      <div class="alert alert-info">
+        {{Trans 'web.diagnosis.off'}}
+      </div>
+      <input type="hidden" name="logging" value="on"/>
+      <input type="submit" value="{{ Trans 'web.diagnosis.SubmitOn' }}" class="btn btn-primary"/>
+    {{/if}}
+</form>
+
+<form method="get" action="/web/diagnosis/logging" class="well">
+    <h5>{{Trans 'web.diagnosis.diagnosisExport'}}</h5>
+
+    <div class="alert alert-info">
+        {{Trans 'web.diagnosis.exportInformation'}}
+    </div>
+    <!--{{#unless diagnosisReady}}
+    <div class="alert alert-block">
+        {{Trans 'web.diagnosis.diagnosisNotReady'}}
+    </div>
+    {{/unless}}-->
+
+    <input type="submit" value="{{Trans 'web.diagnosis.exportSubmit'}}" class="btn btn-primary" />
+</form>
